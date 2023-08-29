@@ -65,9 +65,6 @@ int verifica(long int* vet){
 	//verifica para cada elemento do vetor se o cálculo está correto.
 	//A verificação é feita checando se ni^2 == n, onde ni == numero inalterado
 	for(int i = 0; i < TAMANHOVETOR; i++){
-		if(vet[i] == 0){
-			printf("%ld, %ld, %d", vet[i], vet[i + TAMANHOVETOR], i);
-		}
 		//checa o valor
 		if(vet[i + TAMANHOVETOR] * vet[i + TAMANHOVETOR] != vet[i]){
 			printf("%ld / %ld == %ld\n",
@@ -119,10 +116,12 @@ int main(void){
 	}*/
 
 	//verifica o resultado
-	if(verifica(vet)) printf("Resultado correto!");
-	else printf("Resultado incorreto!");
+	if(verifica(vet)) printf("Resultado correto!\n\n");
+	else printf("Resultado incorreto!\n\n");
 
 	//libera espaço
 	free(vet);
+
+	printf("Thread principal terminou as operacoes e sera encerrada :(");
 	pthread_exit(NULL);
 }
