@@ -13,6 +13,7 @@ sentido por ser uma parte "mais sequencial"....
 #include <stdio.h>
 
 int main(){
+	//inicializando vetores com os tempos coletados
 	float uma_t_ini[5] = {0.003919, 0.005805, 0.003806, 0.005829, 0.008323};
 	float uma_t_exe[5] = {0.135982, 0.492964, 0.142050, 0.621446, 0.580419};
 
@@ -22,6 +23,7 @@ int main(){
 	float quatro_t_ini[5] = {0.004028, 0.004180, 0.003996, 0.003820, 0.006156};
 	float quatro_t_exe[5] = {0.269142, 0.243854, 0.263083, 0.215264, 0.686930};
 
+	//inicializando medias
 	float uma_t_iniMedia = 0;
 	float uma_t_exeMedia = 0;
 
@@ -31,6 +33,7 @@ int main(){
 	float quatro_t_iniMedia = 0;
 	float quatro_t_exeMedia = 0;
 
+	//calculando medias
 	for(int i = 0; i < 5; i++){
 		uma_t_iniMedia += uma_t_ini[i];
 		uma_t_exeMedia += uma_t_exe[i];
@@ -49,7 +52,7 @@ int main(){
 	uma_t_exeMedia /= 5;
 	duas_t_exeMedia /= 5;
 	quatro_t_exeMedia /= 5;
-
+	
 	printf("Tempo medio de inicializacao com 1 thread (\"sequencial\"): %f\n", uma_t_iniMedia);
 	printf("Tempo medio de inicializacao com 2 threads: %f\n", duas_t_iniMedia);
 	printf("Tempo medio de inicializacao com 4 threads: %f\n\n", quatro_t_iniMedia);
@@ -58,6 +61,7 @@ int main(){
 	printf("Tempo medio de execucao com 2 threads: %f\n", duas_t_exeMedia);
 	printf("Tempo medio de execucao com 4 threads: %f\n\n", quatro_t_exeMedia);
 
+	//inicializando aceleracao
 	float duas_t_aceleracao = 0;
 	float quatro_t_aceleracao = 0;
 
