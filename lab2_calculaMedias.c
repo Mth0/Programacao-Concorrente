@@ -5,7 +5,7 @@ Esses testes foram feitos em um compilador online de C.
 
 Falando um pouco sobre o resultado, achei interessante o fato de 2 threads ser consideravelmente melhor
 do que 4. Além disso, o tempo de inicializacao nao interferiu muito no calculo geral das medias, o que faz
-sentido por ser uma parte "mais sequencial"....
+sentido por ser uma parte sequencial....
 
 ----------------------------------
 */
