@@ -6,3 +6,5 @@ Códigos da disciplina Programação Concorrente.
 29/09/2023: As resoluções do lab4 foram adicionadas sendo os arquivos "lab4_leitorEscritor.h", "lab4_leitorEscritor.c" e "lab4_main_list_leitorEscritor.c". Importante executá-los na mesma pasta. Adicional a isso o código depende de "timer.h", "list_int.h" e "list_int.c" para que funcione corretamente.
 
 04/10/2023: Adicionei "lab5_leArquivo.c". Posteriormente apaguei e adicionei de novo removendo alguns trechos de código comentados.
+
+06/10/2023: Reenviei os trabalhos do lab4, eles contém "v2" no fim do nome, sendo eles: "lab4_leitorEscritor_v2.h", "lab4_leitorEscritor_v2.c" e "lab4_main_list_leitorEscritor_v2.c". O motivo do reenvio foi o fato de eu ter esquecido de inicializar as variáveis de condição. Removi o rwlock do arquivo também (no caso sua declaração e inicialização) e adicionei nos arquivos uma função inic() que inicializa as variáveis de condição utilizadas e uma função destroi() que destrói elas. Além disso, adicionei as comparações de tempo também, coloquei no arquivo "lab4_tempos.txt" para manter mais organizado.
