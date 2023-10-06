@@ -1,0 +1,324 @@
+Fiz cinco testes em 3 situações. O número de operações foi 1000000 em todas as situações, tendo então a variação no número de threads. Os números foram 1 ("sequencial"), 2 e 6 (número de núcleos da minha máquina, se não me engano).
+
+Minha implementação ficou ligeiramente mais rápida que o rwlock com 1 e "na média" com 2 threads também, porém foi a com pior desempenho no teste com 6 threads. A implementação com o mutex foi a melhor entre as 3 em todos os casos de teste.
+
+Interessante notar que o desempenho do rwlock foi "intercalando" no teste com duas threads.... Executei mais vezes e o comportamento pareceu se manter assim.
+
+----------------------------------------
+
+Com uma thread e 1000000 de operações
+
+--------------------
+
+MUTEX:
+
+main_list 1
+Thread 0: in=9833 out=10033 read=980134
+Tempo: 0.083938
+
+main_list 1
+Thread 0: in=9833 out=10033 read=980134
+Tempo: 0.084287
+
+main_list 1
+Thread 0: in=9833 out=10033 read=980134
+Tempo: 0.084162
+
+main_list 1
+Thread 0: in=9833 out=10033 read=980134
+Tempo: 0.084443
+
+main_list 1
+Thread 0: in=9833 out=10033 read=980134
+Tempo: 0.083732
+
+--------------------
+
+RWLOCK:
+
+main_list_rwlock 1
+Thread 0: in=9833 out=10033 read=980134
+Tempo: 0.138944
+
+main_list_rwlock 1
+Thread 0: in=9833 out=10033 read=980134
+Tempo: 0.137784
+
+main_list_rwlock 1
+Thread 0: in=9833 out=10033 read=980134
+Tempo: 0.138138
+
+main_list_rwlock 1
+Thread 0: in=9833 out=10033 read=980134
+Tempo: 0.138655
+
+main_list_rwlock 1
+Thread 0: in=9833 out=10033 read=980134
+Tempo: 0.138154
+
+--------------------
+
+MINHA IMPLEMENTAÇÃO:
+
+lab4_main_list_leitorEscritor_v2 1
+Thread 0: in=9833 out=10033 read=980134
+Tempo: 0.120097
+
+lab4_main_list_leitorEscritor_v2 1
+Thread 0: in=9833 out=10033 read=980134
+Tempo: 0.120239
+
+lab4_main_list_leitorEscritor_v2 1
+Thread 0: in=9833 out=10033 read=980134
+Tempo: 0.119846
+
+lab4_main_list_leitorEscritor_v2 1
+Thread 0: in=9833 out=10033 read=980134
+Tempo: 0.119481
+
+lab4_main_list_leitorEscritor_v2 1
+Thread 0: in=9833 out=10033 read=980134
+Tempo: 0.120744
+
+
+----------------------------------------
+
+Com duas thread e 1000000 de operações
+
+--------------------
+
+MUTEX:
+
+main_list 2
+Thread 1: in=4927 out=5077 read=489996
+Thread 0: in=4927 out=5077 read=489996
+Tempo: 0.155851
+
+main_list 2
+Thread 1: in=4927 out=5077 read=489996
+Thread 0: in=4927 out=5077 read=489996
+Tempo: 0.157282
+
+main_list 2
+Thread 0: in=4927 out=5077 read=489996
+Thread 1: in=4927 out=5077 read=489996
+Tempo: 0.156072
+
+main_list 2
+Thread 1: in=4927 out=5077 read=489996
+Thread 0: in=4927 out=5077 read=489996
+Tempo: 0.166899
+
+main_list 2
+Thread 1: in=4927 out=5077 read=489996
+Thread 0: in=4927 out=5077 read=489996
+Tempo: 0.152944
+
+--------------------
+
+RWLOCK:
+
+main_list_rwlock 2
+Thread 0: in=4927 out=5077 read=489996
+Thread 1: in=4927 out=5077 read=489996
+Tempo: 0.542667
+
+main_list_rwlock 2
+Thread 1: in=4927 out=5077 read=489996
+Thread 0: in=4927 out=5077 read=489996
+Tempo: 0.246680
+
+main_list_rwlock 2
+Thread 0: in=4927 out=5077 read=489996
+Thread 1: in=4927 out=5077 read=489996
+Tempo: 0.534981
+
+main_list_rwlock 2
+Thread 1: in=4927 out=5077 read=489996
+Thread 0: in=4927 out=5077 read=489996
+Tempo: 0.265286
+
+main_list_rwlock 2
+Thread 0: in=4927 out=5077 read=489996
+Thread 1: in=4927 out=5077 read=489996
+Tempo: 0.557983
+
+--------------------
+
+MINHA IMPLEMENTACAO:
+
+lab4_main_list_leitorEscritor_v2 2
+Thread 1: in=4927 out=5077 read=489996
+Thread 0: in=4927 out=5077 read=489996
+Tempo: 0.255159
+
+lab4_main_list_leitorEscritor_v2 2
+Thread 1: in=4927 out=5077 read=489996
+Thread 0: in=4927 out=5077 read=489996
+Tempo: 0.404737
+
+lab4_main_list_leitorEscritor_v2 2
+Thread 1: in=4927 out=5077 read=489996
+Thread 0: in=4927 out=5077 read=489996
+Tempo: 0.255584
+
+lab4_main_list_leitorEscritor_v2 2
+Thread 1: in=4927 out=5077 read=489996
+Thread 0: in=4927 out=5077 read=489996
+Tempo: 0.396877
+
+lab4_main_list_leitorEscritor_v2 2
+Thread 0: in=4927 out=5077 read=489996
+Thread 1: in=4927 out=5077 read=489996
+Tempo: 0.250742
+
+----------------------------------------
+
+Com seis thread e 1000000 de operações
+
+--------------------
+
+MUTEX:
+
+main_list 6
+Thread 5: in=1612 out=1682 read=163372
+Thread 1: in=1612 out=1682 read=163373
+Thread 2: in=1612 out=1682 read=163373
+Thread 3: in=1612 out=1682 read=163373
+Thread 4: in=1612 out=1682 read=163372
+Thread 0: in=1612 out=1682 read=163373
+Tempo: 0.213031
+
+main_list 6
+Thread 4: in=1612 out=1682 read=163372
+Thread 3: in=1612 out=1682 read=163373
+Thread 1: in=1612 out=1682 read=163373
+Thread 5: in=1612 out=1682 read=163372
+Thread 0: in=1612 out=1682 read=163373
+Thread 2: in=1612 out=1682 read=163373
+Tempo: 0.196088
+
+main_list 6
+Thread 2: in=1612 out=1682 read=163373
+Thread 4: in=1612 out=1682 read=163372
+Thread 0: in=1612 out=1682 read=163373
+Thread 3: in=1612 out=1682 read=163373
+Thread 5: in=1612 out=1682 read=163372
+Thread 1: in=1612 out=1682 read=163373
+Tempo: 0.221060
+
+main_list 6
+Thread 5: in=1612 out=1682 read=163372
+Thread 2: in=1612 out=1682 read=163373
+Thread 3: in=1612 out=1682 read=163373
+Thread 0: in=1612 out=1682 read=163373
+Thread 4: in=1612 out=1682 read=163372
+Thread 1: in=1612 out=1682 read=163373
+Tempo: 0.187666
+
+main_list 6
+Thread 4: in=1612 out=1682 read=163372
+Thread 2: in=1612 out=1682 read=163373
+Thread 3: in=1612 out=1682 read=163373
+Thread 0: in=1612 out=1682 read=163373
+Thread 5: in=1612 out=1682 read=163372
+Thread 1: in=1612 out=1682 read=163373
+Tempo: 0.212265
+
+--------------------
+
+RWLOCK:
+
+main_list_rwlock 6
+Thread 3: in=1612 out=1682 read=163373
+Thread 1: in=1612 out=1682 read=163373
+Thread 5: in=1612 out=1682 read=163372
+Thread 2: in=1612 out=1682 read=163373
+Thread 0: in=1612 out=1682 read=163373
+Thread 4: in=1612 out=1682 read=163372
+Tempo: 0.459589
+
+main_list_rwlock 6
+Thread 1: in=1612 out=1682 read=163373
+Thread 0: in=1612 out=1682 read=163373
+Thread 2: in=1612 out=1682 read=163373
+Thread 3: in=1612 out=1682 read=163373
+Thread 4: in=1612 out=1682 read=163372
+Thread 5: in=1612 out=1682 read=163372
+Tempo: 0.455574
+
+main_list_rwlock 6
+Thread 0: in=1612 out=1682 read=163373
+Thread 2: in=1612 out=1682 read=163373
+Thread 4: in=1612 out=1682 read=163372
+Thread 5: in=1612 out=1682 read=163372
+Thread 1: in=1612 out=1682 read=163373
+Thread 3: in=1612 out=1682 read=163373
+Tempo: 0.467706
+
+main_list_rwlock 6
+Thread 2: in=1612 out=1682 read=163373
+Thread 0: in=1612 out=1682 read=163373
+Thread 5: in=1612 out=1682 read=163372
+Thread 1: in=1612 out=1682 read=163373
+Thread 3: in=1612 out=1682 read=163373
+Thread 4: in=1612 out=1682 read=163372
+Tempo: 0.462528
+
+main_list_rwlock 6
+Thread 2: in=1612 out=1682 read=163373
+Thread 4: in=1612 out=1682 read=163372
+Thread 1: in=1612 out=1682 read=163373
+Thread 3: in=1612 out=1682 read=163373
+Thread 0: in=1612 out=1682 read=163373
+Thread 5: in=1612 out=1682 read=163372
+Tempo: 0.478914
+
+--------------------
+
+MINHA IMPLEMENTACAO:
+
+lab4_main_list_leitorEscritor_v2 6
+Thread 4: in=1612 out=1682 read=163372
+Thread 3: in=1612 out=1682 read=163373
+Thread 0: in=1612 out=1682 read=163373
+Thread 5: in=1612 out=1682 read=163372
+Thread 1: in=1612 out=1682 read=163373
+Thread 2: in=1612 out=1682 read=163373
+Tempo: 0.718176
+
+lab4_main_list_leitorEscritor_v2 6
+Thread 0: in=1612 out=1682 read=163373
+Thread 4: in=1612 out=1682 read=163372
+Thread 5: in=1612 out=1682 read=163372
+Thread 1: in=1612 out=1682 read=163373
+Thread 2: in=1612 out=1682 read=163373
+Thread 3: in=1612 out=1682 read=163373
+Tempo: 0.720400
+
+lab4_main_list_leitorEscritor_v2 6
+Thread 4: in=1612 out=1682 read=163372
+Thread 5: in=1612 out=1682 read=163372
+Thread 0: in=1612 out=1682 read=163373
+Thread 1: in=1612 out=1682 read=163373
+Thread 2: in=1612 out=1682 read=163373
+Thread 3: in=1612 out=1682 read=163373
+Tempo: 0.719274
+
+lab4_main_list_leitorEscritor_v2 6
+Thread 4: in=1612 out=1682 read=163372
+Thread 0: in=1612 out=1682 read=163373
+Thread 2: in=1612 out=1682 read=163373
+Thread 1: in=1612 out=1682 read=163373
+Thread 3: in=1612 out=1682 read=163373
+Thread 5: in=1612 out=1682 read=163372
+Tempo: 0.723984
+
+lab4_main_list_leitorEscritor_v2 6
+Thread 1: in=1612 out=1682 read=163373
+Thread 4: in=1612 out=1682 read=163372
+Thread 5: in=1612 out=1682 read=163372
+Thread 2: in=1612 out=1682 read=163373
+Thread 0: in=1612 out=1682 read=163373
+Thread 3: in=1612 out=1682 read=163373
+Tempo: 0.701631
