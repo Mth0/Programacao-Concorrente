@@ -10,3 +10,5 @@ Códigos da disciplina Programação Concorrente.
 06/10/2023: Reenviei os trabalhos do lab4, eles contém "v2" no fim do nome, sendo eles: "lab4_leitorEscritor_v2.h", "lab4_leitorEscritor_v2.c" e "lab4_main_list_leitorEscritor_v2.c". O motivo do reenvio foi o fato de eu ter esquecido de inicializar as variáveis de condição. Removi o rwlock do arquivo também (no caso sua declaração e inicialização) e adicionei nos arquivos uma função inic() que inicializa as variáveis de condição utilizadas e uma função destroi() que destrói elas. Além disso, adicionei as comparações de tempo também, coloquei no arquivo "lab4_tempos.txt" para manter mais organizado.
 
 08/10/2023: Adicionei a o arquivo "lab5_leArquivo_v2.c", agora parece funcional!! Obrigado pela ajuda, Silvana e Mariana.
+
+24/10/2023: Adicionei os arquivos "lab6_LeitorEscritor2.java" e "lab6_verificaLE.py". Não é propriamente a primeira versão desses arquivos. Mas a última é dessa data descrita. No arquivo há uma breve (tentativa de) descrição sobre a nova lógica implementada.
