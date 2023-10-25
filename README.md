@@ -11,4 +11,4 @@ Códigos da disciplina Programação Concorrente.
 
 08/10/2023: Adicionei a o arquivo "lab5_leArquivo_v2.c", agora parece funcional!! Obrigado pela ajuda, Silvana e Mariana.
 
-24/10/2023: Adicionei os arquivos "lab6_LeitorEscritor2.java" e "lab6_verificaLE.py". Não é propriamente a primeira versão desses arquivos. Mas a última é dessa data descrita. No arquivo há uma breve (tentativa de) descrição sobre a nova lógica implementada.
+24/10/2023: Adicionei os arquivos "lab6_LeitorEscritor2.java" e "lab6_verificaLE.py". Não é propriamente a primeira versão desses arquivos. Mas a última é dessa data descrita. Nos arquivos há uma breve (tentativa de) descrição sobre a nova lógica implementada para priorização da operação de escrita.
