@@ -14,3 +14,5 @@ Códigos da disciplina Programação Concorrente.
 24/10/2023: Adicionei os arquivos "lab6_LeitorEscritor2.java" e "lab6_verificaLE.py". Não é propriamente a primeira versão desses arquivos. Mas a última é dessa data descrita. Nos arquivos há uma breve (tentativa de) descrição sobre a nova lógica implementada para priorização da operação de escrita.
 
 15/11/2023: Adicionei o arquivo "lab8_poolDeThreads.java". No arquivo tem uma breve descrição de algumas mudanças feitas e também de como o teste de corretude funciona.
+
+21/11/2023: Adicionei o arquivo "lab9_poolDeProcessos.py". No arquivo tem uma breve descrição sobre o teste de corretude e alguns testes de tempo feitos.
